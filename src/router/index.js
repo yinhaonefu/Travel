@@ -19,3 +19,5 @@ export default new Router({
     }
   ]
 })
+
+// 单页面应用，不会再次发起请求，js会感知到url的变化，根据不同的url显示不同的组件

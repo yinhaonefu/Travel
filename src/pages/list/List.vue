@@ -10,6 +10,6 @@ export default {
 
 <style>
   .list{
-    color: red;
+    font-size: 50px;
   }
 </style>
