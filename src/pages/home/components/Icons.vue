@@ -1,11 +1,15 @@
 <template>
   <div class="icons">
-    <div class="icon" v-for="item of iconList" :key="item.id">
-      <div class="icon-img">
-        <img class="icon-img-content" :src="item.iconUrl" />
-      </div>
-      <p class="icon-desc">{{item.desc}}</p>
-    </div>
+    <swiper :options="swiperOption" ref="mySwiper">
+      <swiper-slide v-for="(page, index) in pages" :key="index">
+        <div class="icon" v-for="item in page" :key="item.id">
+          <div class="icon-img">
+            <img class="icon-img-content" :src="item.iconUrl" />
+          </div>
+          <p class="icon-desc">{{item.desc}}</p>
+        </div>
+      </swiper-slide>
+    </swiper>
   </div>
 </template>
 
@@ -14,6 +18,9 @@ export default {
   name: 'HomeIcons',
   data () {
     return {
+      swiperOption: {
+        pagination: '.swiper-pagination'
+      },
       iconList: [
         {
           id: 1,
@@ -54,8 +61,31 @@ export default {
           id: 8,
           iconUrl: 'http://img1.qunarzz.com/piao/fusion/1808/8d/747c9a29b8dba402.png',
           desc: '国宝巡礼'
+        },
+        {
+          id: 9,
+          iconUrl: 'http://img1.qunarzz.com/piao/fusion/1803/6a/45f595250c73d102.png',
+          desc: '夏日玩水'
+        },
+        {
+          id: 10,
+          iconUrl: 'http://img1.qunarzz.com/piao/fusion/1803/20/831d62d2e1c7be02.png',
+          desc: '文化古迹'
         }
       ]
+    }
+  },
+  computed: {
+    pages: function () {
+      const pages = []
+      this.iconList.forEach((item, index) => {
+        const page = Math.floor(index / 8)
+        if (!pages[page]) {
+          pages[page] = []
+        }
+        pages[page].push(item)
+      })
+      return pages
     }
   }
 }
@@ -63,6 +93,10 @@ export default {
 
 <style lang="stylus" scoped>
 @import '~styles/varibles.styl'
+@import '~styles/mixins.styl'
+.icons >>> .swiper-container
+  height 0
+  padding-bottom 50%
 .icons
   overflow hidden
   width: 100%
@@ -94,4 +128,6 @@ export default {
       line-height .4rem
       text-align center
       color $darkTextColor
+      //文字超长部分使用省略号，定义在mixins.styl，已引入
+      ellipsis()
 </style>
