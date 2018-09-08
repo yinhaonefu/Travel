@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import VueAwesomeSwiper from 'vue-awesome-swiper'
 
 // webpack.base.conf.js 中 设置别名 styles 代表 src/assets/styles目录 让页面在每个终端显示的内容一致
 import 'styles/reset.css'
@@ -15,8 +16,11 @@ import fastClick from 'fastclick'
 
 import 'styles/iconfont.css'
 
+import 'swiper/dist/css/swiper.css'
+
 Vue.config.productionTip = false
 fastClick.attach(document.body)
+Vue.use(VueAwesomeSwiper)
 
 /* eslint-disable no-new */
 new Vue({
