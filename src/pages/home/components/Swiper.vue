@@ -41,10 +41,11 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-//  因为scoped限制了只在当前组件样式设置有效，所以使用>>>样式穿透，覆盖.wrapper下.swiper-pagination-bullet-active背景色
+// 因为scoped限制了只在当前组件样式设置有效，所以使用>>>样式穿透，覆盖.wrapper下.swiper-pagination-bullet-active背景色
   .wrapper >>> .swiper-pagination-bullet-active
     background: #fff
   .wrapper
+  //为了解决3G下图片加载慢下方文字内容占据图片位置问题，具体看图片宽高比 本项目是26.67%
     overflow hidden
     width: 100%
     height: 0
