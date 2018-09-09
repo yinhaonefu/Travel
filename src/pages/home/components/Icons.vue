@@ -16,63 +16,14 @@
 <script>
 export default {
   name: 'HomeIcons',
+  props: {
+    iconList: Array
+  },
   data () {
     return {
       swiperOption: {
         pagination: '.swiper-pagination'
-      },
-      iconList: [
-        {
-          id: 1,
-          iconUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-          desc: '热门景点'
-        },
-        {
-          id: 2,
-          iconUrl: 'http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png',
-          desc: '北京必游'
-        },
-        {
-          id: 3,
-          iconUrl: 'http://img1.qunarzz.com/piao/fusion/1803/6a/45f595250c73d102.png',
-          desc: '夏日玩水'
-        },
-        {
-          id: 4,
-          iconUrl: 'http://img1.qunarzz.com/piao/fusion/1803/20/831d62d2e1c7be02.png',
-          desc: '文化古迹'
-        },
-        {
-          id: 5,
-          iconUrl: 'http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png',
-          desc: '动植物园'
-        },
-        {
-          id: 6,
-          iconUrl: 'http://img1.qunarzz.com/piao/fusion/1803/6c/9e54a8540fee0102.png',
-          desc: '故宫'
-        },
-        {
-          id: 7,
-          iconUrl: 'http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png',
-          desc: '一日游'
-        },
-        {
-          id: 8,
-          iconUrl: 'http://img1.qunarzz.com/piao/fusion/1808/8d/747c9a29b8dba402.png',
-          desc: '国宝巡礼'
-        },
-        {
-          id: 9,
-          iconUrl: 'http://img1.qunarzz.com/piao/fusion/1803/6a/45f595250c73d102.png',
-          desc: '夏日玩水'
-        },
-        {
-          id: 10,
-          iconUrl: 'http://img1.qunarzz.com/piao/fusion/1803/20/831d62d2e1c7be02.png',
-          desc: '文化古迹'
-        }
-      ]
+      }
     }
   },
   computed: {

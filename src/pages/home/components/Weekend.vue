@@ -18,35 +18,8 @@
 <script>
 export default {
   name: 'HomeWeekend',
-  data: function () {
-    return {
-      weekendList: [
-        {
-          id: 1,
-          url: 'http://img1.qunarzz.com/sight/source/1606/85/c6b6bad1b977e.jpg_r_640x214_5c638941.jpg',
-          title: '漂流勇进，烧烤露营',
-          desc: '轻松水上漂，任我乐逍遥'
-        },
-        {
-          id: 2,
-          url: 'http://img1.qunarzz.com/sight/source/1606/85/c6b6bad1b977e.jpg_r_640x214_5c638941.jpg',
-          title: '漂流勇进，烧烤露营',
-          desc: '轻松水上漂，任我乐逍遥'
-        },
-        {
-          id: 3,
-          url: 'http://img1.qunarzz.com/sight/source/1606/85/c6b6bad1b977e.jpg_r_640x214_5c638941.jpg',
-          title: '漂流勇进，烧烤露营',
-          desc: '轻松水上漂，任我乐逍遥'
-        },
-        {
-          id: 4,
-          url: 'http://img1.qunarzz.com/sight/source/1606/85/c6b6bad1b977e.jpg_r_640x214_5c638941.jpg',
-          title: '漂流勇进，烧烤露营',
-          desc: '轻松水上漂，任我乐逍遥'
-        }
-      ]
-    }
+  props: {
+    weekendList: Array
   }
 }
 </script>

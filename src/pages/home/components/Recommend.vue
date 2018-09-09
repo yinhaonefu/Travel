@@ -17,35 +17,8 @@
 <script>
 export default {
   name: 'HomeRecommond',
-  data: function () {
-    return {
-      recommendList: [
-        {
-          id: 1,
-          url: 'http://img1.qunarzz.com/sight/p0/1508/89/895a1b7add84f23faca053ce9e3153db.water.jpg_200x200_99ae30ee.jpg',
-          title: '北京欢乐谷',
-          desc: '北京市东四环旁边北京市东四环旁边北京市东四环旁边北京市东四环旁边'
-        },
-        {
-          id: 2,
-          url: 'http://img1.qunarzz.com/sight/p0/1508/89/895a1b7add84f23faca053ce9e3153db.water.jpg_200x200_99ae30ee.jpg',
-          title: '北京欢乐谷',
-          desc: '北京市东四环旁边北京市东四环旁边北京市东四环旁边北京市东四环旁边'
-        },
-        {
-          id: 3,
-          url: 'http://img1.qunarzz.com/sight/p0/1508/89/895a1b7add84f23faca053ce9e3153db.water.jpg_200x200_99ae30ee.jpg',
-          title: '北京欢乐谷',
-          desc: '北京市东四环旁边北京市东四环旁边北京市东四环旁边北京市东四环旁边'
-        },
-        {
-          id: 4,
-          url: 'http://img1.qunarzz.com/sight/p0/1508/89/895a1b7add84f23faca053ce9e3153db.water.jpg_200x200_99ae30ee.jpg',
-          title: '北京欢乐谷',
-          desc: '北京市东四环旁边北京市东四环旁边北京市东四环旁边北京市东四环旁边'
-        }
-      ]
-    }
+  props: {
+    recommendList: Array
   }
 }
 </script>
