@@ -79,8 +79,8 @@ export default {
       color #ccc
       ellipsis()
     .item-button
-      margin-top .2rem
       background-color darkorange
       border-radius .05rem
-      font-size .3rem
+      font-size .2rem
+      padding .1rem
 </style>
