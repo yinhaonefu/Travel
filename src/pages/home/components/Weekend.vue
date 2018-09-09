@@ -2,7 +2,7 @@
     <div>
       <div class="title">周末去哪儿</div>
       <ul>
-        <li class="item border-bottom" v-for="item in itemList" :key="item.id">
+        <li class="item border-bottom" v-for="item in weekendList" :key="item.id">
           <div class="item-img-wrapper">
             <img class="item-img" :src="item.url"/>
           </div>
@@ -20,7 +20,7 @@ export default {
   name: 'HomeWeekend',
   data: function () {
     return {
-      itemList: [
+      weekendList: [
         {
           id: 1,
           url: 'http://img1.qunarzz.com/sight/source/1606/85/c6b6bad1b977e.jpg_r_640x214_5c638941.jpg',
@@ -54,7 +54,6 @@ export default {
 <style lang="stylus" scoped>
   @import "~styles/mixins.styl"
 .title
-  margin-top .2rem
   line-height .8rem
   background #eee
   text-indent .2rem
